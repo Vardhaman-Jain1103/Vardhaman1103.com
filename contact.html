@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="contact-form">
+                    <h4>Talk to us</h4>
+                    <form id="contactForm" action="https://getform.io/f/bejyrmya" method="POST">
+                        <div class="form-group">
+                            <label for="workEmail">Work email</label>
+                            <input type="email" class="form-control" id="workEmail" name="workEmail" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstName">First name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastName">Last name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to Fyle's terms and conditions, and provide consent to send me
+                                communication.</label>
+                        </div>
+                        <button type="submit" class="btn btn-block" id="contactUsBtn" disabled>Contact Us</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('terms').addEventListener('change', function () {
+            document.getElementById('contactUsBtn').disabled = !this.checked;
+        });
+    </script>
+</body>
+</html>
